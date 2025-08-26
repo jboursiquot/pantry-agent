@@ -1,0 +1,268 @@
+[
+  {
+    "id": "veggie-tacos",
+    "name": "Veggie Tacos",
+    "meal_types": ["lunch", "dinner"],
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "tortilla",
+        "qty": 4,
+        "unit": "count"
+      },
+      {
+        "name": "black bean",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "name": "tomato",
+        "qty": 2,
+        "unit": "count"
+      },
+      {
+        "name": "lettuce",
+        "qty": 50,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "rice-omelet",
+    "name": "Rice Omelet (Omurice-Lite)",
+    "meal_types": ["breakfast", "lunch"],
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "rice",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "name": "egg",
+        "qty": 4,
+        "unit": "count"
+      },
+      {
+        "name": "onion",
+        "qty": 1,
+        "unit": "count"
+      }
+    ]
+  },
+  {
+    "id": "chicken-stirfry",
+    "name": "Chicken Stir-Fry",
+    "meal_types": ["lunch", "dinner"],
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "name": "broccoli",
+        "qty": 100,
+        "unit": "g"
+      },
+      {
+        "name": "carrot",
+        "qty": 100,
+        "unit": "g"
+      },
+      {
+        "name": "soy sauce",
+        "qty": 20,
+        "unit": "mL",
+        "optional": true
+      }
+    ]
+  },
+  {
+    "id": "beef-pasta",
+    "name": "Beef Pasta",
+    "meal_types": ["dinner"],
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "ground beef",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "name": "pasta",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "name": "tomato",
+        "qty": 2,
+        "unit": "count"
+      },
+      {
+        "name": "onion",
+        "qty": 1,
+        "unit": "count"
+      }
+    ]
+  },
+  {
+    "id": "lentil-soup",
+    "name": "Lentil Soup",
+    "meal_types": ["lunch", "dinner"],
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "lentil",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "name": "carrot",
+        "qty": 100,
+        "unit": "g"
+      },
+      {
+        "name": "onion",
+        "qty": 1,
+        "unit": "count"
+      },
+      {
+        "name": "garlic",
+        "qty": 5,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "tofu-stirfry",
+    "name": "Tofu Stir-Fry",
+    "meal_types": ["lunch", "dinner"],
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "tofu",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "name": "bell pepper",
+        "qty": 1,
+        "unit": "count"
+      },
+      {
+        "name": "broccoli",
+        "qty": 100,
+        "unit": "g"
+      },
+      {
+        "name": "garlic",
+        "qty": 5,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "cheese-omelet",
+    "name": "Cheese Omelet",
+    "meal_types": ["breakfast"],
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "egg",
+        "qty": 2,
+        "unit": "count"
+      },
+      {
+        "name": "cheddar",
+        "qty": 50,
+        "unit": "g"
+      },
+      {
+        "name": "butter",
+        "qty": 10,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "grilled-cheese",
+    "name": "Grilled Cheese Sandwich",
+    "meal_types": ["breakfast", "lunch", "snack"],
+    "servings": 1,
+    "ingredients": [
+      {
+        "name": "bread",
+        "qty": 2,
+        "unit": "slice"
+      },
+      {
+        "name": "cheddar",
+        "qty": 30,
+        "unit": "g"
+      },
+      {
+        "name": "butter",
+        "qty": 5,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "bean-soup",
+    "name": "Black Bean Soup",
+    "meal_types": ["lunch", "dinner"],
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "black bean",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "name": "onion",
+        "qty": 1,
+        "unit": "count"
+      },
+      {
+        "name": "garlic",
+        "qty": 5,
+        "unit": "g"
+      },
+      {
+        "name": "tomato",
+        "qty": 2,
+        "unit": "count"
+      }
+    ]
+  },
+  {
+    "id": "veggie-pasta",
+    "name": "Veggie Pasta",
+    "meal_types": ["lunch", "dinner"],
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "pasta",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "name": "broccoli",
+        "qty": 100,
+        "unit": "g"
+      },
+      {
+        "name": "bell pepper",
+        "qty": 1,
+        "unit": "count"
+      },
+      {
+        "name": "garlic",
+        "qty": 5,
+        "unit": "g"
+      }
+    ]
+  }
+]

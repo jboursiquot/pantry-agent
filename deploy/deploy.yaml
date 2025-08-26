@@ -1,0 +1,96 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: Pantry Agent Coordinator
+
+Parameters:
+  OtelExporterOtlpEndpoint:
+    Type: String
+    Default: "set-me"
+    Description: "OpenTelemetry OTLP exporter endpoint"
+  
+  OtelExporterOtlpHeaders:
+    Type: String
+    Default: "set-me" 
+    Description: "OpenTelemetry OTLP exporter headers"
+  
+  OtelServiceVersion:
+    Type: String
+    Default: "0.1.0"
+    Description: "OpenTelemetry service version"
+  
+  OtelServiceName:
+    Type: String
+    Default: "pantry-agent"
+    Description: "OpenTelemetry service name"
+  
+  OtelDeployEnv:
+    Type: String
+    Default: "development"
+    Description: "OpenTelemetry deployment environment"
+
+Resources:
+  ArtifactsBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: Private
+
+  CoordinatorRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: [lambda.amazonaws.com]
+            Action: ["sts:AssumeRole"]
+      Policies:
+        - PolicyName: CoordinatorPolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                Resource:
+                  - !Sub "arn:aws:s3:::${ArtifactsBucket}/*"
+              - Effect: Allow
+                Action:
+                  - bedrock:InvokeModel
+                Resource:
+                  - arn:aws:bedrock:*::foundation-model/*
+                  - arn:aws:bedrock:*:*:inference-profile/*
+
+  Coordinator:
+    Type: AWS::Serverless::Function
+    Properties:
+      Role: !GetAtt CoordinatorRole.Arn
+      CodeUri: ../build/coordinator-bedrock-lambda/bootstrap.zip
+      Runtime: provided.al2
+      Handler: bootstrap
+      MemorySize: 256
+      Timeout: 300
+      Environment:
+        Variables:
+          # S3 Configuration for artifacts
+          ARTIFACTS_S3_BUCKET: !Ref ArtifactsBucket
+          ARTIFACTS_PANTRY_S3_KEY: pantry.json
+          ARTIFACTS_RECIPES_S3_KEY: recipes.json
+          
+          # Model Configuration (required by ModelConfig struct)
+          MODEL_ID: "us.anthropic.claude-3-7-sonnet-20250219-v1:0"
+          MAX_TOKENS: "1024"
+          TEMPERATURE: "0.2"
+          TOP_P: "0.9"
+
+          # OpenTelemetry Configuration
+          OTEL_EXPORTER_OTLP_ENDPOINT: !Ref OtelExporterOtlpEndpoint
+          OTEL_EXPORTER_OTLP_HEADERS: !Ref OtelExporterOtlpHeaders
+          OTEL_SERVICE_VERSION: !Ref OtelServiceVersion
+          OTEL_SERVICE_NAME: !Ref OtelServiceName
+          OTEL_DEPLOY_ENV: !Ref OtelDeployEnv
+
+Outputs:
+  ArtifactsBucket:
+    Description: "Artifacts S3 bucket for pantry and recipes JSON files"
+    Value: !Ref ArtifactsBucket

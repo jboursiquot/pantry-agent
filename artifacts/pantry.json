@@ -1,0 +1,166 @@
+{
+  "ingredients": [
+    {
+      "name": "rice",
+      "qty": 1000,
+      "unit": "g",
+      "days_left": 9999
+    },
+    {
+      "name": "pasta",
+      "qty": 800,
+      "unit": "g",
+      "days_left": 9999
+    },
+    {
+      "name": "tortilla",
+      "qty": 10,
+      "unit": "count",
+      "days_left": 7
+    },
+    {
+      "name": "bread",
+      "qty": 12,
+      "unit": "slice",
+      "days_left": 5
+    },
+    {
+      "name": "egg",
+      "qty": 12,
+      "unit": "count",
+      "days_left": 14
+    },
+    {
+      "name": "milk",
+      "qty": 2,
+      "unit": "L",
+      "days_left": 5
+    },
+    {
+      "name": "cheddar",
+      "qty": 300,
+      "unit": "g",
+      "days_left": 10
+    },
+    {
+      "name": "yogurt",
+      "qty": 500,
+      "unit": "g",
+      "days_left": 7
+    },
+    {
+      "name": "butter",
+      "qty": 200,
+      "unit": "g",
+      "days_left": 30
+    },
+    {
+      "name": "olive oil",
+      "qty": 200,
+      "unit": "mL",
+      "days_left": 9999
+    },
+    {
+      "name": "onion",
+      "qty": 5,
+      "unit": "count",
+      "days_left": 10
+    },
+    {
+      "name": "garlic",
+      "qty": 20,
+      "unit": "g",
+      "days_left": 20
+    },
+    {
+      "name": "tomato",
+      "qty": 6,
+      "unit": "count",
+      "days_left": 5
+    },
+    {
+      "name": "lettuce",
+      "qty": 150,
+      "unit": "g",
+      "days_left": 3
+    },
+    {
+      "name": "broccoli",
+      "qty": 200,
+      "unit": "g",
+      "days_left": 4
+    },
+    {
+      "name": "carrot",
+      "qty": 200,
+      "unit": "g",
+      "days_left": 7
+    },
+    {
+      "name": "bell pepper",
+      "qty": 3,
+      "unit": "count",
+      "days_left": 7
+    },
+    {
+      "name": "chicken breast",
+      "qty": 400,
+      "unit": "g",
+      "days_left": 3
+    },
+    {
+      "name": "ground beef",
+      "qty": 300,
+      "unit": "g",
+      "days_left": 3
+    },
+    {
+      "name": "tofu",
+      "qty": 250,
+      "unit": "g",
+      "days_left": 5
+    },
+    {
+      "name": "black bean",
+      "qty": 400,
+      "unit": "g",
+      "days_left": 9999
+    },
+    {
+      "name": "lentil",
+      "qty": 400,
+      "unit": "g",
+      "days_left": 9999
+    },
+    {
+      "name": "oats",
+      "qty": 500,
+      "unit": "g",
+      "days_left": 9999
+    },
+    {
+      "name": "salt",
+      "qty": 100,
+      "unit": "g",
+      "days_left": 9999
+    },
+    {
+      "name": "pepper",
+      "qty": 50,
+      "unit": "g",
+      "days_left": 9999
+    },
+    {
+      "name": "cumin",
+      "qty": 20,
+      "unit": "g",
+      "days_left": 9999
+    },
+    {
+      "name": "paprika",
+      "qty": 20,
+      "unit": "g",
+      "days_left": 9999
+    }
+  ]
+}
