@@ -47,7 +47,7 @@ func NewPrompt(task string, tp pantryagent.ToolProvider) (Prompt, error) {
 	}, nil
 }
 
-const systemPrompt = `You are a meal-planning coordinator.
+const systemPrompt = `You are a meal-planning assistant.
 
 GOAL:
 Plan meals over the user-specified days and servings, using the tools to gather pantry state and available recipes, then return the final meal plan JSON.
@@ -95,10 +95,10 @@ CRITICAL RULES:
 - Always call pantry_get before finalizing.
 - Always call recipe_get before selecting meals.
 - Prioritize ingredients with the lowest days_left when choosing meals.
-- The coordinator will check feasibility; your final plan must fit the pantry without shortages or unit mismatches.
+- The assistant will check feasibility; your final plan must fit the pantry without shortages or unit mismatches.
 - days_planned must always contain at least one element.
 - Call pantry_get and recipe_get at most once each per session.
-- Reuse the latest tool_result content already provided; do not re-call a tool unless the coordinator says the data changed.
+- Reuse the latest tool_result content already provided; do not re-call a tool unless the assistant says the data changed.
 - If you already have pantry + recipes, proceed to planning and produce the final JSON.
 `
 
