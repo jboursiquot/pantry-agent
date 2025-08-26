@@ -155,7 +155,7 @@ run-bedrock-local-example: ## run Bedrock coordinator agent locally
 
 run-bedrock-instrumented-example: ## run instrumented Bedrock coordinator agent locally
 	MODEL_ID=$(BEDROCK_MODEL_ID) \
-		go run -race ./cmd/coordinator/instrumented/*.go
+		go run -race ./cmd/coordinator/bedrock/instrumented/*.go
 
 run-bedrock-lambda: ## run Bedrock coordinator agent as lambda
 	echo "Not implemented"
