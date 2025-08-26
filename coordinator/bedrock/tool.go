@@ -1,6 +1,6 @@
 package bedrock
 
-import "github.com/modelcontextprotocol/go-sdk/jsonschema"
+import "github.com/google/jsonschema-go/jsonschema"
 
 type Tool struct {
 	Name        string             `json:"name"`

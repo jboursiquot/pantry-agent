@@ -3,7 +3,7 @@ package tools
 import (
 	"context"
 
-	"github.com/modelcontextprotocol/go-sdk/jsonschema"
+	"github.com/google/jsonschema-go/jsonschema"
 )
 
 type Tool interface {
