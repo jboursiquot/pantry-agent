@@ -9,7 +9,7 @@ import (
 	"pantryagent"
 	"pantryagent/tools"
 
-	"github.com/modelcontextprotocol/go-sdk/jsonschema"
+	"github.com/google/jsonschema-go/jsonschema"
 	"go.opentelemetry.io/otel/sdk/trace"
 )
 
